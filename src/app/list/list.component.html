@@ -1,0 +1,10 @@
+<p>car list</p>
+@if (carNames.length > 0) {
+    @for (carName of carNames; track $index) {
+        <li>{{ carName }}</li>
+    }
+}
+@else {
+    <p>no cars</p>
+}
+
