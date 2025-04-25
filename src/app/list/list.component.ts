@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { CarService } from '../car.service';
 
 @Component({
   selector: 'app-list',
@@ -7,5 +8,16 @@ import { Component, Input } from '@angular/core';
   styleUrl: './list.component.scss'
 })
 export class ListComponent { 
-  @Input() carNames: string[] = [];
+  // @Input() carNames: string[] = [];
+  carNames: string[] = [];
+
+  constructor(private carService: CarService) { }
+  // this.carService.carNames$.subscribe(names => this.carNames = names);
+
+  ngOnInit() {
+    this.carService.carNames$.subscribe((names) => {
+      this.carNames = names;
+    });
+  }
+
 }

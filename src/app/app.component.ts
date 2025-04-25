@@ -11,10 +11,10 @@ import { ListComponent } from './list/list.component';
 })
 export class AppComponent {
   title = 'jvl-code';
-  carNames: string[] = [];
+  // carNames: string[] = [];
 
-  onCarAdded(carName: string) {
-    console.log(carName, 'from app');
-    this.carNames.push(carName);
-  }
+  // onCarAdded(carName: string) {
+  //   console.log(carName, 'from app');
+  //   this.carNames.push(carName);
+  // }
 }
