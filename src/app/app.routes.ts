@@ -7,5 +7,8 @@ export const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent },
     { path: 'about/:id', component: AboutComponent },
-    { path: 'contact', component: ContactComponent }
+    { path: 'contact', component: ContactComponent },
+    { path: 'feature1', 
+        loadComponent: () => import('./feature1/feature1.component').then(m => m.Feature1Component)
+    }
 ];
